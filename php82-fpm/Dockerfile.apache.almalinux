@@ -61,7 +61,7 @@ yum autoremove -y &> /dev/null && yum clean all &> /dev/null && rm -rf /var/cach
 WORKDIR /var/www/html
 
 
-COPY /contrib/s2i/bin/ /usr/libexec/s2i
+COPY contribx/s2i/bin/ /usr/libexec/s2i
 COPY contrib/apache-security.conf /etc/httpd/conf.d/security.conf
 COPY contrib/info.php /var/www/html/index.php
 COPY contrib/www.conf /php-fpm/www.conf
